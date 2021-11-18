@@ -1,6 +1,7 @@
+const pizzas = require('../database/Pizzas.json')
 const controller = {
     listar: (req, res)=> {
-        res.send("Listando as pizzas ....")
+        res.send(pizzas)
     }
 }
 
