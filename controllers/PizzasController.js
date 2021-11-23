@@ -6,8 +6,8 @@ const controller = {
     getPizza: (req, res) => {
         let idPizza = req.params.id;
         let saborPizza = pizzas.find(pizzas=> pizzas.id == idPizza)
-        res.send(saborPizza)
+        res.render('pizza', {saborPizza});
     }
 }
 
-module.exports = controller;
+module.exports = controller; 
