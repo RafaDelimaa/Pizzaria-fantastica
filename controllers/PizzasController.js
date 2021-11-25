@@ -5,9 +5,10 @@ const controller = {
     },
     getPizza: (req, res) => {
         let idPizza = req.params.id;
-        let saborPizza = pizzas.find(pizzas=> pizzas.id == idPizza)
-        res.render('pizza', {saborPizza});
+        let pizza = pizzas.find(pizzas=> pizzas.id == idPizza)
+        res.render('pizza', {pizza});
+        // criar um if/else caso não tenha a pizza
     }
 }
 
-module.exports = controller; 
+module.exports = controller;
