@@ -1,7 +1,8 @@
 const pizzas = require('../database/Pizzas.json')
 const controller = {
     listar: (req, res)=> {
-        res.send(pizzas)
+        return res.render('index',{pizzas, busca: ""})
+        // res.send(pizzas)
     },
     getPizza: (req, res) => {
         let idPizza = req.params.id;
